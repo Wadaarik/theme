@@ -1,0 +1,6 @@
+development:
+  password: 2b9806ec3c2e15ba5388ea005155e050
+  theme_id: "79377563728"
+  store: boule-de-boudiou.myshopify.com
+ignore_files:
+  - config/settings_data.json
