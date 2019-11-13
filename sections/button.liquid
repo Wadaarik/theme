@@ -3,7 +3,7 @@
   <hr>
   <div>
     <h3> {{ section.settings.text-box }} </h3>
-    <a href="{{ section.settings.link }}" class="button" style="background: {{ section.settings.background_color }}; color: {{ section.settings.color }};">{{ section.settings.linktext }}</a>
+    <a href="{{ section.settings.link }}" class="button Size-{{ section.settings.width }}" style="background: {{ section.settings.background_color }}; color: {{ section.settings.color }};">{{ section.settings.linktext }}</a>
   </div>
   <hr>
   <div class="rte">
@@ -34,6 +34,16 @@
   "default": "Click here"
   },
   {
+  "type": "select",
+  "id": "width",
+  "options": [
+  { "value": "Petit", "label": "Petit"},
+  { "value": "Moyen", "label": "Moyen"},
+  { "value": "Grand", "label": "Grand"}
+  ],
+  "label": "Taille"
+  },
+  {
   "type": "color",
   "id": "background_color",
   "label": "Background color",
@@ -62,6 +72,16 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
+  }
+
+  .Size-Petit {
+  width: 50%;
+  }
+  .Size-Moyen {
+  width: 70%;
+  }
+  .Size-Grand {
+  width: 100%;
   }
 
   .button {
