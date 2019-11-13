@@ -1,56 +1,89 @@
-<hr>
 <div id="section-cta">
-  <h3> {{ section.settings.text-box }} </h3>
-  <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+  <h1>{{ page.title }}</h1>
+  <hr>
+  <div>
+    <h3> {{ section.settings.text-box }} </h3>
+    <a href="{{ section.settings.link }}" class="button" style="background: {{ section.settings.background_color }}; color: {{ section.settings.color }};">{{ section.settings.linktext }}</a>
+  </div>
+  <hr>
+  <div class="rte">
+    {{ page.content }}
+  </div>
 </div>
-<hr>
+
 
 {% schema %}
-{
+  {
   "name": "Call to action",
   "settings": [
-    {
-      "id": "text-box",
-      "type": "text",
-      "label": "Heading",
-      "default": "Title"
-    },
-    {
-      "id": "link",
-      "type": "url",
-      "label": "Button link"
-    },
-    {
-      "id": "linktext",
-      "type": "text",
-      "label": "Button text",
-      "default": "Click Here"
-    }
+  {
+  "id": "text-box",
+  "type": "text",
+  "label": "Heading",
+  "default": "Title"
+  },
+  {
+  "id": "link",
+  "type": "url",
+  "label": "Button link"
+  },
+  {
+  "id": "linktext",
+  "type": "text",
+  "label": "Button text",
+  "default": "Click here"
+  },
+  {
+  "type": "color",
+  "id": "background_color",
+  "label": "Background color",
+  "default": "#ffffff"
+  },
+  {
+  "type": "color",
+  "id": "color",
+  "label": "Text color",
+  "default": "#000"
+  }
   ]
-}
+  ,
+  "presets": [
+  {
+  "name": "Call to Action",
+  "category": "Call To Action"
+  }
+  ]
+  }
 {% endschema %}
 
 {% stylesheet %}
-.button {
+  #section-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  }
+
+  .button {
   display: inline-block;
   padding: 0.85em 1.5em;
   font-size: 1.5em;
   cursor: pointer;
   text-decoration: none;
   color: #ffffff;
-  background-color: #5c6ac4;
+  background-color: #936100;
   border: none;
   border-radius: 0.62em;
   box-shadow: 0 0.25em #999999;
-}
-.button:hover {
-  background-color: #202e78;
-}
-.button:active {
-  background-color: #5c6ac4;
+  }
+  .button:hover {
+  background-color: #dac08e;
+  }
+  .button:active {
+  background-color: #936100;
   box-shadow: 0 0.125em #666666;
   transform: translateY(0.25em);
-}
+  }
 {% endstylesheet %}
 
 {% javascript %}
