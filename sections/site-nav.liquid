@@ -1,0 +1,45 @@
+<div id="section-menu">
+    <h2>{{ section.settings.text-menu }}</h2>
+    <div>
+        <h3> {{ section.settings.text-box }} </h3>
+        <section>{{ section.settings.logo | img_url: '2048x' | img_tag }}</section>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+    "name": "Menu",
+    "settings": [
+        {
+            "id": "text-box",
+            "type": "text",
+            "label": "Heading",
+            "default": "Title"
+        },
+        {
+            "id": "text-menu",
+            "type": "text",
+            "label": "Heading",
+            "default": "Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo image"
+        }
+    ],
+    "presets": [
+    {
+    "name": "Menu",
+    "category": "Menu"
+    }
+    ]
+    }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
