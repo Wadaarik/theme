@@ -3,6 +3,9 @@
     <div>
         <h3> {{ section.settings.text-box }} </h3>
         <section>{{ section.settings.logo | img_url: '2048x' | img_tag }}</section>
+        {% for link in linklists.main-menu.links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
     </div>
 </div>
 
@@ -27,6 +30,11 @@
             "type": "image_picker",
             "id": "logo",
             "label": "Logo image"
+        },
+        {
+            "type": "link_list",
+            "id": "link_list",
+            "label": "Menu"
         }
     ],
     "presets": [
