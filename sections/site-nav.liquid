@@ -6,7 +6,7 @@
             <a href="{{ link.url }}">{{ link.title }}</a>
         {% endfor %}
         <hr>
-        {% for product_type in collections[section.settings.collections].products %}
+        {% for product_type in collections[section.settings.collection].products %}
             <div class="slideshow-container"  onclick="plusSlides(1)">
                 <div class="mySlides fade">
                     <div class="numbertext">{{ product_type.title | escape }} - {{ product_type.price | money }}</div>
