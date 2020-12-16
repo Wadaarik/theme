@@ -1,1 +1,1 @@
-# theme
+# Liquid theme for Shopify
